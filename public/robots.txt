@@ -1,0 +1,10 @@
+# ==========================================
+# Robots.txt - TUXXA (https://tuxxa.com.br)
+# Infraestrutura em Movimento
+# ==========================================
+
+User-agent: *
+Allow: /
+
+# Sitemap oficial para o Google Search Console e indexadores
+Sitemap: https://tuxxa.com.br/sitemap.xml

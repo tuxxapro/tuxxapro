@@ -2,27 +2,61 @@
 <html lang="pt-BR">
   <head>
     <meta charset="utf-8" />
-    <title>TUXXA | INFRAESTRUTURA EM MOVIMENTO</title>
+    <title>TUXXA | Infraestrutura em Movimento - Cloud, Kubernetes & DevOps</title>
     <base href="./" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="TUXXA - Consultoria especializada em Infraestrutura Cloud, Kubernetes, CI/CD e FinOps. Infraestrutura em Movimento."
+      content="TUXXA - Consultoria especializada em Infraestrutura Cloud, Kubernetes, CI/CD, GitOps, Terraform e FinOps. Acelere sua operação com resiliência e alta performance."
     />
-    <meta name="keywords" content="TUXXA, DevOps, Infraestrutura, Cloud, Kubernetes, Terraform, AWS, FinOps, SRE, GitOps" />
+    <meta
+      name="keywords"
+      content="TUXXA, Infraestrutura em Movimento, DevOps, Cloud, Kubernetes, Terraform, AWS, FinOps, SRE, GitOps, Docker, CI/CD, Consultoria Cloud"
+    />
     <meta name="author" content="TUXXA Tecnologia" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
-    <!-- Open Graph / Redes Sociais -->
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://tuxxa.com.br/" />
+    <link rel="alternate" hreflang="pt-BR" href="https://tuxxa.com.br/" />
+
+    <!-- Google Search Console: Adicione seu código de verificação aqui se optar pelo método de meta tag -->
+    <!-- <meta name="google-site-verification" content="SEU_CODIGO_DO_SEARCH_CONSOLE" /> -->
+
+    <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+    <meta property="og:locale" content="pt_BR" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="TUXXA | INFRAESTRUTURA EM MOVIMENTO" />
+    <meta property="og:site_name" content="TUXXA" />
+    <meta property="og:url" content="https://tuxxa.com.br/" />
+    <meta property="og:title" content="TUXXA | Infraestrutura em Movimento - Cloud, Kubernetes & DevOps" />
     <meta
       property="og:description"
-      content="Consultoria especializada em Infraestrutura Cloud, Kubernetes, CI/CD e FinOps."
+      content="Consultoria especializada em Infraestrutura Cloud, Kubernetes, CI/CD, GitOps, Terraform e FinOps. Acelere sua operação com resiliência e alta performance."
     />
-    <meta property="og:site_name" content="TUXXA" />
+    <meta property="og:image" content="https://tuxxa.com.br/images/tuxxa-banner.png" />
+    <meta property="og:image:secure_url" content="https://tuxxa.com.br/images/tuxxa-banner.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1024" />
+    <meta property="og:image:height" content="558" />
+    <meta property="og:image:alt" content="TUXXA - Infraestrutura em Movimento" />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/tuxxa-mascot.png" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://tuxxa.com.br/" />
+    <meta name="twitter:title" content="TUXXA | Infraestrutura em Movimento" />
+    <meta
+      name="twitter:description"
+      content="Consultoria especializada em Infraestrutura Cloud, Kubernetes, CI/CD, GitOps e FinOps."
+    />
+    <meta name="twitter:image" content="https://tuxxa.com.br/images/tuxxa-banner.png" />
+    <meta name="twitter:image:alt" content="TUXXA - Infraestrutura em Movimento" />
+
+    <!-- Favicon & Identidade Visual -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" href="images/tuxxa-mascot.png" />
+    <meta name="theme-color" content="#0284c7" />
 
     <!-- Google Fonts: Inter & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -31,6 +65,46 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Dados Estruturados Schema.org (JSON-LD) para o Google -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://tuxxa.com.br/#organization",
+            "name": "TUXXA",
+            "alternateName": "TUXXA - Infraestrutura em Movimento",
+            "url": "https://tuxxa.com.br/",
+            "logo": {
+              "@type": "ImageObject",
+              "@id": "https://tuxxa.com.br/#logo",
+              "url": "https://tuxxa.com.br/images/tuxxa-brand-nav.png",
+              "contentUrl": "https://tuxxa.com.br/images/tuxxa-brand-nav.png",
+              "caption": "TUXXA"
+            },
+            "image": "https://tuxxa.com.br/images/tuxxa-banner.png",
+            "description": "Consultoria especializada em Infraestrutura Cloud, Kubernetes, CI/CD, GitOps, Terraform e FinOps.",
+            "email": "tuxxa.contato@gmail.com",
+            "sameAs": [
+              "https://github.com/tuxxapro"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://tuxxa.com.br/#website",
+            "url": "https://tuxxa.com.br/",
+            "name": "TUXXA - Infraestrutura em Movimento",
+            "description": "Consultoria especializada em Infraestrutura Cloud, Kubernetes, CI/CD e FinOps.",
+            "publisher": {
+              "@id": "https://tuxxa.com.br/#organization"
+            },
+            "inLanguage": "pt-BR"
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <app-root></app-root>
