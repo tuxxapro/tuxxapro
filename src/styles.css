@@ -114,6 +114,12 @@ a {
   padding: 0 1.5rem;
 }
 
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
 /* Efeito de Gradiente em Textos */
 .text-gradient {
   background: var(--grad-title);
