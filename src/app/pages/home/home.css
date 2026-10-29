@@ -1,0 +1,203 @@
+/* ==========================================================================
+   TUXXA - Home "Em breve" - Schema de Cores Oficial & Clean Tech
+   ========================================================================== */
+
+:host {
+  display: block;
+  width: 100%;
+}
+
+.home-hero {
+  min-height: calc(100vh - 160px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 3.5rem 1.5rem;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+/* Efeitos Luminosos de Fundo (Ciano & Laranja Oficiais) */
+.ambient-glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.cyan-glow {
+  top: 30%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(2, 132, 199, 0.08) 0%, rgba(13, 148, 136, 0.03) 50%, transparent 70%);
+  filter: blur(80px);
+}
+
+.orange-glow {
+  top: 65%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(234, 88, 12, 0.06) 0%, rgba(245, 158, 11, 0.02) 50%, transparent 70%);
+  filter: blur(90px);
+}
+
+/* Card Principal da Home (Modern Clean White com Top Border de Acento) */
+.hero-card {
+  position: relative;
+  z-index: 1;
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  border-radius: 28px;
+  padding: 3.75rem 3rem;
+  max-width: 620px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 
+    0 4px 6px -1px rgba(15, 23, 42, 0.02),
+    0 24px 50px -12px rgba(15, 23, 42, 0.08),
+    0 0 0 1px rgba(241, 245, 249, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  transition: transform var(--trans-normal), box-shadow var(--trans-normal);
+}
+
+/* Linha Superior com o Gradiente Oficial da TUXXA (Ciano -> Teal -> Laranja) */
+.hero-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #0284c7 0%, #0d9488 45%, #ea580c 100%);
+}
+
+.hero-card:hover {
+  box-shadow: 
+    0 4px 6px -1px rgba(15, 23, 42, 0.02),
+    0 30px 60px -12px rgba(2, 132, 199, 0.12),
+    0 0 0 1px rgba(2, 132, 199, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Showcase do Logo Oficial (Mascote + Marca) */
+.brand-hero-showcase {
+  margin-bottom: 1.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform var(--trans-normal);
+}
+
+.brand-hero-showcase:hover {
+  transform: scale(1.02);
+}
+
+.brand-hero-img {
+  width: 100%;
+  max-width: 310px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 18px rgba(15, 23, 42, 0.06));
+}
+
+/* Título "Em breve" com Gradiente da Marca */
+.hero-title {
+  font-size: 2.85rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, #0f172a 0%, #0284c7 60%, #ea580c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  margin-bottom: 0.85rem;
+  line-height: 1.15;
+}
+
+/* Descrição Limpa e de Alto Contraste */
+.hero-description {
+  font-size: 1.05rem;
+  color: #475569 !important;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  max-width: 480px;
+}
+
+.hero-description strong {
+  color: #0f172a !important;
+  font-weight: 600;
+}
+
+/* Grupo de Botões com o Schema Oficial */
+.hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.hero-actions .btn-primary {
+  background: linear-gradient(135deg, #0284c7 0%, #0d9488 100%) !important;
+  color: #ffffff !important;
+  border: none;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.25);
+  font-weight: 600;
+}
+
+.hero-actions .btn-primary:hover {
+  background: linear-gradient(135deg, #0369a1 0%, #0f766e 100%) !important;
+  box-shadow: 0 6px 20px rgba(2, 132, 199, 0.35);
+  transform: translateY(-2px);
+}
+
+.hero-actions .btn-outline {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: var(--shadow-sm);
+  font-weight: 600;
+}
+
+.hero-actions .btn-outline:hover {
+  background: #f8fafc !important;
+  border-color: rgba(2, 132, 199, 0.4) !important;
+  color: #0284c7 !important;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 640px) {
+  .hero-card {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .brand-hero-img {
+    max-width: 240px;
+  }
+
+  .hero-title {
+    font-size: 2.25rem;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="cyber-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#4facfe" />
+    </linearGradient>
+    <linearGradient id="neon-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+  </defs>
+  <!-- Background Badge -->
+  <rect width="64" height="64" rx="16" fill="#090d16" />
+  <rect x="2" y="2" width="60" height="60" rx="14" stroke="url(#cyber-grad)" stroke-width="1.5" stroke-opacity="0.4" />
+  
+  <!-- Stylized Cloud / Hex / Terminal Node -->
+  <path d="M18 36L26 22L38 22L46 36L38 50L26 50Z" stroke="url(#neon-glow)" stroke-width="2.5" stroke-linejoin="round" fill="#0f172a" />
+  <circle cx="32" cy="36" r="5" fill="url(#cyber-grad)" />
+  <circle cx="26" cy="22" r="3" fill="#38bdf8" />
+  <circle cx="38" cy="22" r="3" fill="#38bdf8" />
+  <circle cx="46" cy="36" r="3" fill="#10b981" />
+  <circle cx="38" cy="50" r="3" fill="#10b981" />
+  <circle cx="26" cy="50" r="3" fill="#38bdf8" />
+  <path d="M26 22L32 36M38 22L32 36M46 36L32 36M38 50L32 36M26 50L32 36" stroke="url(#cyber-grad)" stroke-width="1.2" stroke-dasharray="2 2" />
+</svg>

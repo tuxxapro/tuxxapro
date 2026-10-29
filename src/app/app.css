@@ -1,0 +1,208 @@
+/* ==========================================================================
+   TUXXA - Layout Principal (Header, Nav, Footer) - Modern Tech
+   ========================================================================== */
+
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Header Moderno & Translúcido
+   -------------------------------------------------------------------------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--header-height);
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  transition: all var(--trans-normal);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  transition: transform var(--trans-fast);
+}
+
+.brand-logo:hover {
+  transform: translateY(-1px);
+}
+
+.brand-nav-image {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Bloco da Direita: Navegação + Botão */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-left: auto;
+}
+
+.nav-desktop {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.nav-link {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #475569;
+  transition: all var(--trans-fast);
+  position: relative;
+  padding: 0.35rem 0;
+}
+
+.nav-link:hover {
+  color: #0284c7;
+}
+
+.nav-link.active {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #0284c7 0%, #ea580c 100%);
+  transition: width var(--trans-normal);
+  border-radius: var(--radius-full);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  color: #0f172a;
+  cursor: pointer;
+  padding: 0.45rem;
+}
+
+.mobile-nav-drawer {
+  display: none;
+}
+
+/* --------------------------------------------------------------------------
+   Footer Moderno
+   -------------------------------------------------------------------------- */
+.site-footer {
+  background: #ffffff;
+  border-top: 1px solid var(--border-light);
+  padding: 1.75rem 0;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-copy {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.footer-contact a {
+  font-size: 0.85rem;
+  font-family: var(--font-mono);
+  color: #0284c7;
+  font-weight: 500;
+  transition: color var(--trans-fast);
+}
+
+.footer-contact a:hover {
+  color: #ea580c;
+}
+
+/* --------------------------------------------------------------------------
+   Mobile Responsive
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .nav-desktop {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .header-right {
+    gap: 0.85rem;
+  }
+
+  .brand-nav-image {
+    height: 40px;
+  }
+
+  .mobile-nav-drawer.is-open {
+    display: block;
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid var(--border-light);
+    padding: 1.5rem;
+    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08);
+  }
+
+  .mobile-nav-link {
+    display: block;
+    padding: 0.85rem 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #475569;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.6);
+  }
+
+  .mobile-nav-link.active,
+  .mobile-nav-link:hover {
+    color: #0284c7;
+  }
+
+  .mobile-cta-box {
+    margin-top: 1.5rem;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
